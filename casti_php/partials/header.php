@@ -1,4 +1,4 @@
-<?php require 'casti_php/inc/config.php' ?>
+<?php require_once 'casti_php/inc/config.php' ?>
 
 <!DOCTYPE html>
 <html>

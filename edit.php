@@ -1,14 +1,18 @@
 <?php
 
-    include "casti_php/inc/config.php";
+    require_once "casti_php/inc/config.php";
 
-    $uloha = $database->get("items", "text",[
+    $uloha = $database->get("items", "text", [
        "id" => $_GET['id']
     ]); 
 
+    echo '<pre>';
+    print_r( $uloha );
+    echo '</pre>';
+
 
      include "casti_php/partials/header.php"; 
-?>
+    ?>
 
     <div class="list"> 
         <h1 class="header"> TODO APP | EDIT </h1> <br>
@@ -24,7 +28,7 @@
         <div class="form-group">
             
         <p>
-            <textarea name="message" id="text" class="input" autocomplete="off" rows="3" required> </textarea>
+            <textarea name="message" id="text" class="input" autocomplete="off" rows="3" required><?php echo $uloha ?></textarea>
         </p>
         
         <p>    

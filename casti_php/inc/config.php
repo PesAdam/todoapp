@@ -3,6 +3,7 @@
 //ukaz vsetky errory
 ini_set('display_startup_errors', 'On');
 ini_set('display_errors', 'On');
+//prepisat na -1
 error_reporting(-1);
   
 //vytahovanie
