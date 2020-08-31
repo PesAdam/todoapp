@@ -2,13 +2,17 @@
 
     require_once "casti_php/inc/config.php";
 
-    $uloha = $database->get("items", "text", [
-       "id" => $_GET['id']
+if (isset($_GET['id'])){
+    $idecko = $_GET['id'];
+} else {
+    $idecko = 0;
+  //nejaka cybova hlaska o tom ze ani nevies co chces natahovat z db
+}
+
+    $uloha = $database->get("items", "uloha", [
+        "id" => $idecko
     ]); 
 
-    echo '<pre>';
-    print_r( $uloha );
-    echo '</pre>';
 
 
      include "casti_php/partials/header.php"; 

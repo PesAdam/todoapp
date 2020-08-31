@@ -18,7 +18,7 @@ $database = new Medoo([
     'database_name' => 'mojatoddo',
     'server' => 'localhost',
     'username' => 'root',
-    'password' => '',
+    'password' => 'dos4wg',
     'charset' => 'utf8'
 ]);
 
