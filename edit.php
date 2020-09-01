@@ -2,16 +2,27 @@
 
     require_once "casti_php/inc/config.php";
 
-    $uloha = $database->get("items", "text", [
-       "id" => $_GET['id']
+    if (isset($_GET['id'])){
+        $idecko = $_GET['id'];
+    } else {
+        $idecko = 0;
+    //nejaka cybova hlaska o tom ze ani nevies co chces natahovat z db
+    }
+
+    $uloha = $database->get("items", "uloha", [
+        "id" => $idecko
     ]); 
 
-    echo '<pre>';
-    print_r( $uloha );
-    echo '</pre>';
+    if(! $uloha) {
 
+        header("HTTP/1.0 404 Not Found");
+        include_once "404.php";
+        die();
 
+    }
+    
      include "casti_php/partials/header.php"; 
+
     ?>
 
     <div class="list"> 
