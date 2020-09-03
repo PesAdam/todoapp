@@ -1,4 +1,8 @@
 (function($){
+    /*
+    INPUT FORMULAR
+    */
+
 
     var form = $('#pridavanie'),
         input = $('#text');
@@ -21,9 +25,12 @@
                     .css({ backgroundColor: '#00bc8c' })
                     .delay(250)
                     .animate ({ backgroundColor: '#353535' });  
+                    
 
                 input.val('').focus();
             }
+            
+
         });
 
         input.on('keypress', function(event){
@@ -34,6 +41,18 @@
             }
 
         });
+
+        /* EDIT FORMULAR */
+        $('#edit').find('#text').select();
+
+        // DELETE FORMULAR 
+        
+        $('#delete-form').on('submit', function(event){
+
+            return confirm('naozaj to chces?');
+
+        });
+
 
     });
 

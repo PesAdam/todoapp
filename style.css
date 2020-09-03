@@ -9,10 +9,12 @@ input{
 }
 
 a{
-    text-decoration: none;
-    border-bottom: 1px dashed #363639;
+    color: grey;
+   
 }
-
+a:hover{
+    cursor: pointer;
+}
 /* List */
 .list{
     background-color: #353535;
@@ -99,4 +101,14 @@ textarea{
     -ms-border-radius: 0.5em;
     -o-border-radius: 0.5em;
 }
- 
+
+.domov-link {
+        background-color: grey;
+        color: white;
+        padding: 14px 25px;
+        font-size: 13px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        margin-top: 20px;
+}

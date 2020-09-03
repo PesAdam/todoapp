@@ -6,7 +6,7 @@
 
     <?php
     
-    $data = $database->select('items' , 'uloha');
+    $data = $database->select('items' , ['id', 'uloha'] );
 
     ?>
     
@@ -14,13 +14,21 @@
         <?php 
         
             foreach ($data as $item){
-                echo '<li class="list-group-item">'.$item.'</li>';
+                echo '<li id="item-'. $item['id'] .'" class="list-group-item">';
+                echo $item['uloha'] ;
+                echo ' <div class= "controls" > ';
+            
+                echo '<a href="edit.php?id=' . $item['id'] .'"  class="edit-link"> edit </a>';
+                echo '<a href="delete.php?id=' . $item['id'] .'" class="delete-link"><i class="fa fa-trash-o" aria-hidden="true"></i></a>';
+
+                echo '</div>';
+                echo  '</li>';
             }
 
         ?>
     </ul>
 
-    <form id="pridavanie" action="casti_php/inc/add-new.php" class="item-add" method="post">
+    <form id="pridavanie" action="casti_php/inc/add-item.php" class="item-add" method="post">
         <div class="form-group">
             
         <p>

@@ -7,6 +7,6 @@
     ]);
 
     if($id){
-        //header('Location:http://localhost/php/toddoappka/');
+        //header('Location: '. $stranka .'/index.php');
         die('funguje');
     }

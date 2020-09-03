@@ -12,6 +12,9 @@ require 'vendor/autoload.php';
 
 use Medoo\Medoo;
 
+//presmerovanie a ine premene
+$stranka = 'http://localhost/php/toddoappka/';
+
 //pripojenie db
 $database = new Medoo([
     'database_type' => 'mysql',
