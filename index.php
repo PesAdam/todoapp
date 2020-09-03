@@ -10,7 +10,7 @@
 
     ?>
     
-    <ul class="items">
+    <ul id="item-list" class="items">
         <?php 
         
             foreach ($data as $item){

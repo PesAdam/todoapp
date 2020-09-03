@@ -5,7 +5,15 @@
 
 
     var form = $('#pridavanie'),
-        input = $('#text');
+        input = $('#text'),
+        list = $('#item-list');
+
+
+    var animation = {
+        zaciatok: '#00bc8c',
+        finale: '353535',
+        pauza: '200'
+    }
 
     form.on('submit', function(event){
         event.preventDefault();
@@ -21,10 +29,10 @@
                 $.ajax({ url: 'http://localhost/php/toddoappka//index.php'}).done(function(html){
                     var novy_element = $(html).find('li:last-child');
                     
-                    novy_element.appendTo('.items')
-                        .css({backgroundColor: '#00bc8c'})
-                        .delay(200)
-                        .animate({backgroundColor: '#353535'});
+                    novy_element.appendTo( list )
+                        .css({backgroundColor: animation.zaciatok})
+                        .delay(animation.pauza)
+                        .animate({backgroundColor: animation.finale});
 
                         input.val('').focus();
                 });
