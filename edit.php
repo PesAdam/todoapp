@@ -14,11 +14,7 @@
     ]); 
 
     if(! $uloha) {
-
-        header("HTTP/1.0 404 Not Found");
-        include_once "404.php";
-        die();
-
+        show_404();
     }
     
      include "casti_php/partials/header.php"; 

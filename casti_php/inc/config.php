@@ -25,6 +25,22 @@ $database = new Medoo([
     'charset' => 'utf8'
 ]);
 
+
+//funckia
+   function show_404 (){
+    
+        header("HTTP/1.0 404 Not Found");
+        include_once "404.php";
+        die();
+
+   } 
+   
+   
+   function is_ajax(){
+        return  (!empty($_SERVER['HTTP_X_REQUESTED_WITH']) && 
+                strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) == 'xmlhttprequest');
+   }
+
 /* echo '<pre>';
 print_r( $database-> info()) ;
 echo '</pre>';

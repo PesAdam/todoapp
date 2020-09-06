@@ -11,7 +11,7 @@
 
     var animation = {
         zaciatok: '#00bc8c',
-        finale: '353535',
+        finale: list.find('li').css('backgroundColor') || '#353535',
         pauza: '200'
     }
 
@@ -38,8 +38,6 @@
                 });
                 
             }
-            
-
         });
 
        /* input.on('keypress', function(event){

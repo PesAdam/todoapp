@@ -7,9 +7,9 @@
     <?php
     
     $data = $database->select('items' , ['id', 'uloha'] );
-
-    ?>
     
+    ?>
+
     <ul id="item-list" class="items">
         <?php 
         

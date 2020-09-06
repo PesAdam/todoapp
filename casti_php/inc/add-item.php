@@ -6,7 +6,14 @@
 
     ]);
 
-    if($id){
-        //header('Location: '. $stranka .'/index.php');
+   // if($id) die('error');
+    
+    if (is_ajax()){
+
         die('funguje');
+    }
+
+    else{
+        header("Location: $stranka/index.php");
+        die();
     }
