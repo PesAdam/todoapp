@@ -2,7 +2,7 @@
     require 'config.php';
 
     $id = $database->insert('items',[
-        'uloha' => $_POST['message']
+        'text' => $_POST['message']
 
     ]);
 

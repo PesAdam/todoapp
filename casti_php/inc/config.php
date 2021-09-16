@@ -13,14 +13,14 @@ require 'vendor/autoload.php';
 use Medoo\Medoo;
 
 //presmerovanie a ine premene
-$stranka = 'http://localhost/php/toddoappka/';
+$stranka = 'http://localhost:8080/';
 
 //pripojenie db
 $database = new Medoo([
     'database_type' => 'mysql',
-    'database_name' => 'mojatoddo',
-    'server' => 'localhost',
-    'username' => 'root',
+    'database_name' => '',
+    'server' => '',
+    'username' => '',
     'password' => '',
     'charset' => 'utf8'
 ]);

@@ -1,21 +1,15 @@
-<?php include "casti_php/partials/header.php"; ?>
+<?php require_once "casti_php/partials/header.php"; ?>
 
     <div class="list"> 
         <h1 class="header"> TODO APP </h1> <br>
 
-
-    <?php
-    
-    $data = $database->select('items' , ['id', 'uloha'] );
-    
-    ?>
-
     <ul id="item-list" class="items">
         <?php 
+            $data = $database->select('items' , ['id', 'text'] );
         
             foreach ($data as $item){
                 echo '<li id="item-'. $item['id'] .'" class="list-group-item">';
-                echo $item['uloha'] ;
+                echo $item['text'] ;
                 echo ' <div class= "controls" > ';
             
                 echo '<a href="edit.php?id=' . $item['id'] .'"  class="edit-link"> edit </a>';

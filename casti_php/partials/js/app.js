@@ -26,7 +26,7 @@
 
         req.done(function(data){
             if(data === 'funguje'){
-                $.ajax({ url: 'http://localhost/php/toddoappka//index.php'}).done(function(html){
+                $.ajax({ url: 'http://localhost:8080'}).done(function(html){
                     var novy_element = $(html).find('li:last-child');
                     
                     novy_element.appendTo( list )
@@ -64,3 +64,4 @@
     });
 
 }(jQuery));
+

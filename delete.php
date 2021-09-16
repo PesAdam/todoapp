@@ -9,7 +9,7 @@
     //nejaka cybova hlaska o tom ze ani nevies co chces natahovat z db
     }
 
-    $uloha = $database->get("items", "uloha", [
+    $uloha = $database->get("items", "text", [
         "id" => $idecko
     ]); 
 

@@ -3,7 +3,7 @@
 
     
     $editnute= $database->update('items',
-        ['uloha' => $_POST['message'] ],
+        ['text' => $_POST['message'] ],
         ['id' => $_POST['id'] ]
     );
 
