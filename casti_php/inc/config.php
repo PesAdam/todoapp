@@ -18,10 +18,10 @@ $stranka = 'http://localhost:8080/';
 //pripojenie db
 $database = new Medoo([
     'database_type' => 'mysql',
-    'database_name' => '',
-    'server' => '',
-    'username' => '',
-    'password' => '',
+    'database_name' => 'hz024703db',
+    'server' => '46.229.230.164',
+    'username' => 'hz024700',
+    'password' => 'dhynydor',
     'charset' => 'utf8'
 ]);
 
